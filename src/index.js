@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// 1 import react and ReactDOM libraries
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Library that defines what a component is and how multiple components work together
+import React from 'react'
+// Library that knows how to get a component to show up in the brtwoser
+import ReactDOM from 'react-dom'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+// 2 Get a reference to th. div with ID root
+const el = document.getElementById('root')
+
+
+// 3 Tell React to take control of that element 
+const root = ReactDOM.createRoot(el)
+
+
+// 4 Create a component
+function APP() {
+    return <h1>hello world</h1>
+}
+
+
+// 5 Show the component on the screen
+root.render(<APP />)
+
